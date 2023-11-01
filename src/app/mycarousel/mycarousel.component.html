@@ -1,0 +1,10 @@
+<ngb-carousel [interval]="0">
+    <ng-template *ngFor="let photo of photos" ngbSlide>
+        <div class="photo-container" [class.zoomed]="photo.zoomed" (click)="zoom()">
+            <img [src]="photo.url" alt="photo.details">
+            <div class="photo-overlay" *ngIf="input === 'Open Hand 1 Overhead'">
+                <div class="photo-details">{{photo.details}}</div>
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>

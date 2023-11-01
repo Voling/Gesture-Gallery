@@ -1,0 +1,38 @@
+<div class="welcome-page">
+  <div class="welcome-message">
+    <h1>Welcome!</h1>
+    <p>I am Dylan Vo.</p>
+  </div>
+</div>
+<!--<app-upload-page *ngIf="uploadPageOpen"></app-upload-page>-->
+<div class="main">
+  <app-handtracker  (onPrediction)="prediction($event)"></app-handtracker>
+  <div class="legend">
+    <div class="legend-item">
+      <b>Open Hand: Next Slide</b> 
+    </div>
+    <div class="legend-item">
+      <b>Close Hand: Previous Slide</b>  
+    </div>
+    <div class="legend-item">
+      <b>Point Hand: Zoom</b> 
+    </div>
+    <div class="legend-item">
+      <b>Pinch Hand: Go to Source</b>  
+    </div>
+    <div class="legend-item">
+      <b>Two Open Hands: Go to Portfolio</b> 
+    </div>
+    <div class="legend-item">
+      <b>Open Hand Overhead: Show Details</b>
+    </div>
+    <div class="legend-item">
+      <b>Two Open Hands Overhead: Hide Details</b>
+    </div>
+    <div>
+
+    </div>
+  </div>
+  <app-mycarousel *ngIf="uploadPageOpen" [input]="gesture" #carousel></app-mycarousel>
+</div>
+

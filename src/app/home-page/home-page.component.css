@@ -1,0 +1,74 @@
+.welcome-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.welcome-page.show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.welcome-page.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.welcome-message h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-message p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10vw;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+    margin-bottom: 10px;
+}
